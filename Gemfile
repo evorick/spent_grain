@@ -3,7 +3,11 @@ source 'https://rubygems.org'
 # My added gems////////////////////////
 
 gem 'stamp'
-
+gem 'humanize_boolean'
+gem 'jquery-ui-rails'
+gem 'less-rails-bootstrap'
+gem "font-awesome-rails"
+gem 'therubyracer'
 
 
 #//////////////////////////////////////

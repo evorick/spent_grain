@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <strong>Lbs available:</strong>
+  <strong>Lbs Available:</strong>
   <%= @brewery.lbs_available %>
 </p>
 
@@ -26,8 +26,8 @@
 </p>
 
 <p>
-  <strong>Currently available:</strong>
-  <%= @brewery.currently_available %>
+  <strong>Currently Available:</strong>
+  <%= @brewery.currently_available.humanize %>
 </p>
 
 <%= link_to 'Edit', edit_brewery_path(@brewery) %> |

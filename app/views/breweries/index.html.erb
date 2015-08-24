@@ -9,8 +9,8 @@
       <th>Address</th>
       <th>Email</th>
       <th>Lbs Available</th>
-      <th>Pickup time</th>
-      <th>Currently Available (yes/no)</th>
+      <th>Pickup Time</th>
+      <th>Currently Available?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
         <td><%= brewery.email %></td>
         <td><%= brewery.lbs_available %></td>
         <td><%= brewery.pickup_times %></td>
-        <td><%= brewery.currently_available %></td>
+        <td><%= brewery.currently_available.humanize %></td>
         <td><%= link_to 'Show', brewery %></td>
         <td><%= link_to 'Edit', edit_brewery_path(brewery) %></td>
         <td><%= link_to 'Destroy', brewery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
