@@ -8,7 +8,7 @@ gem 'jquery-ui-rails'
 gem 'less-rails-bootstrap'
 gem "font-awesome-rails"
 gem 'therubyracer'
-
+gem 'devise'
 
 #//////////////////////////////////////
 

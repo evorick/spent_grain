@@ -1,41 +1,46 @@
-<%= form_for(@brewery) do |f| %>
-  <% if @brewery.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@brewery.errors.count, "error") %> prohibited this brewery from being saved:</h2>
 
-      <ul>
-      <% @brewery.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="container">
+
+    <%= form_for(@brewery) do |f| %>
+      <% if @brewery.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@brewery.errors.count, "error") %> prohibited this brewery from being saved:</h2>
+
+          <ul>
+          <% @brewery.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :lbs_available %><br>
-    <%= f.number_field :lbs_available %>
-  </div>
-  <div class="field">
-    <%= f.label :pickup_times %><br>
-    <%= f.datetime_select :pickup_times %>
-  </div>
-  <div class="field">
-    <%= f.label :currently_available %><br>
-    <%= f.check_box :currently_available %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :address %><br>
+        <%= f.text_field :address %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :lbs_available %><br>
+        <%= f.number_field :lbs_available %>
+      </div>
+      <div class="field">
+        <%= f.label :pickup_times %><br>
+        <%= f.datetime_select :pickup_times %>
+      </div>
+      <div class="field">
+        <%= f.label :currently_available %><br>
+        <%= f.check_box :currently_available %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+
+</div>
