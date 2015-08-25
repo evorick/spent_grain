@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SpentGrain</title>
+  <title>Spent Grain</title>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/cosmo/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
+
+  <style>
+    /* Only necessary if you are using navbar-fixed-top */
+    body {
+      padding-top: 50px;
+    }
+  </style>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <%= render 'layouts/navbar' %>
+
+  <div class="container">
+    <% if notice.present? %>
+     <div class="alert alert-dismissable alert-success">
+       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+       <%= notice %>
+     </div>
+   <% elsif alert.present? %>
+      <div class="alert alert-dismissable alert-success">
+       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+       <%= alert %>
+     </div>
+   <% end %>
 
 <%= yield %>
 
